@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LMD Portfolio - Awards & News</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./image_assets/other pink computer.png">
+    <link rel="icon" type="image/png" href="./image_assets/lmd logo three.png">
+
+    <style>
+        body {
+            background-color: #ffe9f9;
+        }
+
+        .btn-purple {
+            color: #AB008B;
+            border-color: #AB008B;
+        }
+
+        .btn-purple:hover {
+            background-color: #AB008B;
+            color: white;
+        }
+
+        h1 {
+            color: #AB008B;
+        }
+
+        /* Carousel caption styling */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        /* Custom arrow container */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 60px;
+            height: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Remove Bootstrap default icons */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background: none;
+        }
+
+        /* Custom arrows */
+        .custom-arrow {
+            display: block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #AB008B;
+            background-size: 50% 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Left arrow (points left) */
+        .prev-arrow {
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M5.5 0L4.5 1 1 4 4.5 7 5.5 6 2 4 5.5 0z"/></svg>');
+        }
+
+        /* Right arrow (points right) */
+        .next-arrow {
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M2.5 0L3.5 1 7 4 3.5 7 2.5 6 6 4 2.5 0z"/></svg>');
+        }
+
+
+        /* Video overlay */
+        #playOverlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffa5e6;">
+        <div class="container-fluid d-flex align-items-center">
+            <a class="navbar-brand me-5" href="./index.html">
+                <img src="./image_assets/lmd logo three.png" height="100" alt="Logo">
+            </a>
+            <div class="d-flex flex-wrap flex-grow-1 gap-2">
+                <a href="./hobbies.html" class="btn btn-lg flex-fill fs-2 btn-purple">Hobbies</a>
+                <a href="./awards.html" class="btn btn-lg flex-fill fs-2 btn-purple">Awards and News</a>
+                <a href="./resume.html" class="btn btn-lg flex-fill fs-2 btn-purple">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <h1 class="text-center py-4"><b>Awards, Accolades, and News</b></h1>
+    <h4 class="text-center mb-5 ms-3 me-3">The Congressional App Challenge is an annual competition that encourages middle and
+        high school students to create and submit their own software applications, promoting engagement in STEM
+        education and computer science.</h4>
+
+    <!--vvvv For final project! vvvv-->
+
+    <!--<div class="card mb-5 me-5 ms-5 text-center">
+        <h5 class="card-header text-white" style="background-color:#AB008B;">Welcome to Blog and News!</h5>
+        <div class="card-body">
+            <h5 class="card-title">This is where I make posts, announcements and relevant information.</h5>
+            <p class="card-text">Lorem ipsum.</p>
+        </div>
+    </div>
+-->
+
+
+    <!-- Main Content -->
+    <div class="container text-center mb-5">
+        <div class="row g-4">
+            <div class="col-md-6 d-flex">
+                <div class="card flex-fill d-flex flex-column">
+                    <h5 class="card-header">Olive: Everything In Moderation Official Advertisement
+                    </h5>
+                    <div class="card-body p-0 flex-fill d-flex">
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                src="https://www.youtube.com/embed/XcFbN7X7yc8?autoplay=1&mute=1&loop=1&playlist=XcFbN7X7yc8"
+                                title="YouTube video" allow="autoplay; encrypted-media" allowfullscreen>
+                            </iframe>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Right Column: Carousel -->
+            <div class="col-md-6 d-flex">
+                <div class="card flex-fill">
+                    <h5 class="card-header">Articles and Press</h5>
+                    <div class="card-body">
+                        <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item-active">
+                                    <div class="ratio ratio-16x9">
+                                        <video autoplay muted controls loop style="object-fit: cover;"
+                                            poster="./image_assets/NBC-Connecticut-News-Roku.webp">
+                                            <source src="./image_assets/Olive on Television Part One.MOV"
+                                                type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./image_assets/delauro press release.png" class="w-100" alt="News 1">
+                                    <a href="https://delauro.house.gov/media-center/press-releases/delauro-celebrates-congressional-app-challenge-winners-joseph-foran-high"
+                                        class="btn btn-purple mt-2" target="_blank">Read More</a>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./image_assets/milford mirror.png" class="w-100" alt="News 2">
+                                    <a href="https://www.milfordmirror.com/news/article/Milford-students-develop-app-focusing-on-mental-16933633.php"
+                                        class="btn btn-purple mt-2" target="_blank">Read More</a>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./image_assets/congressional app challenge.png" class="w-100"
+                                        alt="News 3">
+                                    <a href="https://www.congressionalappchallenge.us/21-ct03/"
+                                        class="btn btn-purple mt-2" target="_blank">Read More</a>
+                                </div>
+
+                            </div>
+
+                            <!-- Carousel Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel"
+                                data-bs-slide="prev">
+                                <span class="custom-arrow prev-arrow" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel"
+                                data-bs-slide="next">
+                                <span class="custom-arrow next-arrow" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container text-center mb-5">
+        <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
+            <div class="card-header text-white" style="background-color:#AB008B; border-radius: 15px 15px 0 0;">
+                <b>Other Awards and Honors</b>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered border-dark">
+                    <colgroup>
+                        <col style="width: 50%;">
+                        <col style="width: 50%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">Accolade</th>
+                            <th scope="col" class="text-center align-middle">Given By</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                            <td>2024-2025 College of Engineering and Architecture Dean's List</td>
+                            <td class="text-center align-middle">Howard University</td>
+
+                        </tr>
+                        <tr>
+                            <td>Intermediate Android
+                                Development Course
+                                for Howard University
+                                Completion -- <em>2024</em></td>
+                            <td class="text-center align-middle">CodePath</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>Capstone in Computer Science -- <em>2024</em></td>
+                            <td class="text-center align-middle">Foran High School</td>
+
+                        </tr>
+                        <tr>
+                            <td>Xerox Award for Innovation and Information Technology -- <em>2023</em></td>
+                            <td class="text-center align-middle">University of Rochester</td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer style="background-color:#ffa5e6;" class="text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>LMD Portfolio</h5>
+                    <p>Software Engineer • Journalist • App Developer</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./hobbies.html" style="color:#AB008B">Hobbies</a></li>
+                        <li><a href="./awards.html" style="color:#AB008B">Awards & News</a></li>
+                        <li><a href="./resume.html" style="color:#AB008B">Resume</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact</h5>
+                    <p class="mb-0">(203) 694-1802</p>
+                    <p class="mb-0">thecoderl729@gmail.com</p>
+                    <p><a href="https://github.com/leighbee-bit" style="color: #AB008B;"">GitHub</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <h5 class="mb-2">Based In</h5>
+                    <ul class="list-unstyled mb-0" style="line-height:1.5;">
+                        <li>Washington, D.C.</li>
+                        <li>New York, NY</li>
+                        <li>New Haven, CT</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3 text-white" style="background-color:#ab008b;">
+            © 2026 Leighla-Marie Dantes
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function playVideo() {
+            const video = document.getElementById('featuredVideo');
+            video.play();
+            document.getElementById('playOverlay').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
